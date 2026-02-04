@@ -21,7 +21,7 @@ class SettingsFragment : BaseFragment<FragmentSettingsBinding>(FragmentSettingsB
     private val viewModel: SettingsViewModel by viewModel()
 
     override fun onViewCreated() {
-        viewModel.handleIntent(SettingsIntent.LoadVersionName(diComponent.appInfoProvider.versionName))
+        viewModel.handleIntent(SettingsIntent.LoadVersionName)
 
         binding.mtvAppLanguageSettings.setOnClickListener { viewModel.handleIntent(SettingsIntent.LanguageClicked) }
         binding.mtvFeedbackSettings.setOnClickListener { viewModel.handleIntent(SettingsIntent.FeedbackClicked) }
