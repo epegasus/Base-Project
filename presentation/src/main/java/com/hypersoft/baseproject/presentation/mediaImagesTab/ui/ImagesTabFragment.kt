@@ -3,7 +3,7 @@ package com.hypersoft.baseproject.presentation.mediaImagesTab.ui
 import android.os.Bundle
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
-import com.hypersoft.baseproject.core.base.fragment.BaseFragment
+import com.hypersoft.baseproject.presentation.base.fragment.BaseFragment
 import com.hypersoft.baseproject.core.extensions.collectWhenStarted
 import com.hypersoft.baseproject.core.extensions.showToast
 import com.hypersoft.baseproject.presentation.databinding.FragmentImagesTabBinding

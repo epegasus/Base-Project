@@ -1,7 +1,7 @@
 package com.hypersoft.baseproject.presentation.mediaImageDetails.ui
 
 import androidx.navigation.fragment.navArgs
-import com.hypersoft.baseproject.core.base.fragment.BaseFragment
+import com.hypersoft.baseproject.presentation.base.fragment.BaseFragment
 import com.hypersoft.baseproject.core.extensions.collectWhenStarted
 import com.hypersoft.baseproject.core.extensions.loadImage
 import com.hypersoft.baseproject.core.extensions.popFrom

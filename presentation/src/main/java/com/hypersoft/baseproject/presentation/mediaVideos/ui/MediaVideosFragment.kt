@@ -1,7 +1,7 @@
 package com.hypersoft.baseproject.presentation.mediaVideos.ui
 
 import androidx.core.view.isVisible
-import com.hypersoft.baseproject.core.base.fragment.BaseFragment
+import com.hypersoft.baseproject.presentation.base.fragment.BaseFragment
 import com.hypersoft.baseproject.core.extensions.collectWhenStarted
 import com.hypersoft.baseproject.core.extensions.navigateTo
 import com.hypersoft.baseproject.core.extensions.popFrom

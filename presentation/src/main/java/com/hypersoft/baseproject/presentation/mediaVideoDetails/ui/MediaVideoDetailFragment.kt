@@ -2,7 +2,7 @@ package com.hypersoft.baseproject.presentation.mediaVideoDetails.ui
 
 import androidx.core.net.toUri
 import androidx.navigation.fragment.navArgs
-import com.hypersoft.baseproject.core.base.fragment.BaseFragment
+import com.hypersoft.baseproject.presentation.base.fragment.BaseFragment
 import com.hypersoft.baseproject.core.extensions.collectWhenStarted
 import com.hypersoft.baseproject.core.extensions.popFrom
 import com.hypersoft.baseproject.core.extensions.showToast

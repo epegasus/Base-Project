@@ -2,7 +2,7 @@ package com.hypersoft.baseproject.presentation.mediaImages.ui
 
 import androidx.core.view.isVisible
 import com.google.android.material.tabs.TabLayoutMediator
-import com.hypersoft.baseproject.core.base.fragment.BaseFragment
+import com.hypersoft.baseproject.presentation.base.fragment.BaseFragment
 import com.hypersoft.baseproject.core.extensions.collectWhenStarted
 import com.hypersoft.baseproject.core.extensions.navigateTo
 import com.hypersoft.baseproject.core.extensions.popFrom

@@ -14,7 +14,7 @@ import androidx.media3.session.SessionToken
 import androidx.navigation.fragment.navArgs
 import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.MoreExecutors
-import com.hypersoft.baseproject.core.base.fragment.BaseFragment
+import com.hypersoft.baseproject.presentation.base.fragment.BaseFragment
 import com.hypersoft.baseproject.core.extensions.collectWhenStarted
 import com.hypersoft.baseproject.core.extensions.loadAlbumArtWithGradientBackground
 import com.hypersoft.baseproject.core.extensions.popFrom

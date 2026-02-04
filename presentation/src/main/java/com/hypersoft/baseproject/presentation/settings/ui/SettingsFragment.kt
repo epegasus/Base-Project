@@ -1,6 +1,6 @@
 package com.hypersoft.baseproject.presentation.settings.ui
 
-import com.hypersoft.baseproject.core.base.fragment.BaseFragment
+import com.hypersoft.baseproject.presentation.base.fragment.BaseFragment
 import com.hypersoft.baseproject.core.extensions.collectWhenStarted
 import com.hypersoft.baseproject.core.extensions.openEmailApp
 import com.hypersoft.baseproject.core.extensions.openPlayStoreApp

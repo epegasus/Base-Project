@@ -1,7 +1,7 @@
 package com.hypersoft.baseproject.presentation.home.ui.fragment
 
 import com.hypersoft.baseproject.core.base.dialog.safeShow
-import com.hypersoft.baseproject.core.base.fragment.BaseFragment
+import com.hypersoft.baseproject.presentation.base.fragment.BaseFragment
 import com.hypersoft.baseproject.core.extensions.collectWhenStarted
 import com.hypersoft.baseproject.core.extensions.onBackPressedDispatcher
 import com.hypersoft.baseproject.presentation.R
