@@ -2,7 +2,6 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
@@ -15,6 +14,10 @@ android {
         targetSdk = 36
         versionCode = 3
         versionName = "3.0.0-MVI"
+    }
+
+    base {
+        archivesName = "Base-Project-v${defaultConfig.versionCode}(${defaultConfig.versionName})"
     }
 
     // Use the "release" signing configuration for the release build
