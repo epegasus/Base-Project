@@ -4,7 +4,9 @@ plugins {
 
 android {
     namespace = "com.hypersoft.baseproject"
-    compileSdk = 36
+    compileSdk {
+        version = release(36)
+    }
 
     defaultConfig {
         applicationId = "com.hypersoft.baseproject"

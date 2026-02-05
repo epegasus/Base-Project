@@ -30,9 +30,11 @@ class SettingsViewModel(private val appInfoProvider: AppInfoProvider) : ViewMode
         }
     }
 
-    fun handleIntent(intent: SettingsIntent) = viewModelScope.launch(coroutineExceptionHandler) {
-        _state.update { it.copy(error = null) }
+    init {
+        handleIntent(SettingsIntent.LoadVersionName)
+    }
 
+    fun handleIntent(intent: SettingsIntent) = viewModelScope.launch(coroutineExceptionHandler) {
         when (intent) {
             is SettingsIntent.LoadVersionName -> loadVersionName()
             is SettingsIntent.LanguageClicked -> _effect.emit(SettingsEffect.NavigateToLanguage)
@@ -49,8 +51,6 @@ class SettingsViewModel(private val appInfoProvider: AppInfoProvider) : ViewMode
 
     private suspend fun handleError(exception: Throwable) {
         val errorMessage = exception.message ?: "An unexpected error occurred"
-
-        _state.update { it.copy(error = errorMessage) }
         _effect.emit(SettingsEffect.ShowError(errorMessage))
     }
 }
