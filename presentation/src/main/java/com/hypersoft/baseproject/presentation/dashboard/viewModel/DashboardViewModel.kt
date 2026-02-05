@@ -30,7 +30,7 @@ class DashboardViewModel : ViewModel() {
 
     fun handleIntent(intent: DashboardIntent) = viewModelScope.launch(coroutineExceptionHandler) {
         when (intent) {
-            is DashboardIntent.RegisterBackPress -> _effect.emit(DashboardEffect.ShowExitDialog)
+            is DashboardIntent.RegisterBackPress -> _effect.emit(DashboardEffect.RegisterBackPress)
         }
     }
 

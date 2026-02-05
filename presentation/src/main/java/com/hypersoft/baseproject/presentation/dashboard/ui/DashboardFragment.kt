@@ -25,17 +25,17 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>(FragmentDashboa
     private val navController by lazy { (childFragmentManager.findFragmentById(binding.fcvContainerDashboard.id) as NavHostFragment).navController }
 
     override fun onViewCreated() {
+        initBottomNavigation()
+    }
+
+    private fun initBottomNavigation() {
         binding.bnvContainerDashboard.setupWithNavController(navController)
         binding.bnvContainerDashboard.setOnItemSelectedListener { it.onNavDestinationSelected(navController) }
     }
 
     override fun onResume() {
         super.onResume()
-        registerBackPress()
-    }
-
-    private fun registerBackPress() {
-        onBackPressedDispatcher { viewModel.handleIntent(DashboardIntent.RegisterBackPress) }
+        viewModel.handleIntent(DashboardIntent.RegisterBackPress)
     }
 
     override fun initObservers() {
@@ -48,8 +48,21 @@ class DashboardFragment : BaseFragment<FragmentDashboardBinding>(FragmentDashboa
 
     private fun handleEffect(effect: DashboardEffect) {
         when (effect) {
-            is DashboardEffect.ShowExitDialog -> showExitDialog()
+            is DashboardEffect.RegisterBackPress -> registerBackPress()
             is DashboardEffect.ShowError -> context.showToast(effect.message)
+        }
+    }
+
+    /**
+     *  This needed to be done to fix issue occur in following flow in real applications
+     *      Flow: Dashboard > Home > Setting > InAppLanguage > Update Language > Setting > BackPress (kills app instead of going back to home)
+     */
+    private fun registerBackPress() {
+        onBackPressedDispatcher {
+            when (navController.currentDestination?.id == R.id.homeFragment) {
+                true -> showExitDialog()
+                false -> navController.popBackStack()
+            }
         }
     }
 
